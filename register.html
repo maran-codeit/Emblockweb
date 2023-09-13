@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+
+h1{
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  
+  display: -webkit-flex;
+  display: flex;
+ 
+ 
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0;
+  
+  position: relative;
+  
+  color: #000;
+}
+
+h1:before{
+  content: attr(data-text);
+  position: absolute;
+  background: linear-gradient(#f70000, #f89200, #f8f501, #038f00,#0168f8, #a200f7);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 90%;
+  
+  clip-path: ellipse(120px 120px at -2.54% -9.25%);
+  animation: swing 5s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes swing{
+  0%{
+     -webkit-clip-path: ellipse(120px 120px at -2.54% -9.25%)
+    clip-path: ellipse(120px 120px at -2.54% -9.25%)
+  }
+  50%{
+    -webkit-clip-path: ellipse(120px 120px at 49.66% 64.36%);
+    clip-path: ellipse(120px 120px at 49.66% 64.36%);
+
+  }
+  100%{
+     -webkit-clip-path: ellipse(120px 120px at 102.62% -1.61%;);
+    clip-path: ellipse(120px 120px at 102.62% -1.61%);
+  }
+}
+
+</style>
+
+
+</head>
+<body class="w3-light-grey">
+<center>
+<h1 data-text= "Register"><b>Register</b></h1>
+</center>
+
+<!-- Navigation Bar -->
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max-width:1500px">
+  <img class="w3-image" src="https://www.w3schools.com/w3images/london2.jpg" alt="London" width="1500" height="700">
+  <div class="w3-display-middle" style="width:65%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Registration');">Commodity Details</button>
+      
+    </div>
+
+    <!-- Tabs -->
+    
+
+    <div id="Registration" class="w3-container w3-white w3-padding-16 myLink">
+      <h3><u>Enter Registration Details</u></h3>
+	  <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+          <label><b>Seller Name : </b></label>
+          <input class="w3-input w3-border" type="text" placeholder="Enter with correct format">
+        </div>
+        
+      </div>
+	  <br><br>
+	  <h3><u>Enter Address Details</u></h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+          <label><b>You are From :</b></label>
+          <input class="w3-input w3-border" type="text" placeholder="Depart from">
+        </div>
+        
+      </div>
+	  <br><br>
+	  <h3><u>Enter Commodity Details</u></h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+          <label><b>Crop Type :</b></label>
+          <input class="w3-input w3-border" type="text" placeholder="Eg:Electronic goods,Stationaries,etc...">
+        </div>
+        
+		<div class="w3-half">
+          <label><b> Expected Average Quantity : </b></label>
+          <input class="w3-input w3-border" type="text" placeholder="Enter In Kilograms">
+        </div>
+      </div>
+	  <center>
+      <p><button class="w3-button w3-dark-grey">Submit</button></p>
+	  </center>
+    </div>
+  </div>
+</header>
+
+  
+  <!-- Contact -->
+  <center>
+  <div class="w3-container">
+    <h2>Contact</h2>
+    
+    <i class="fa fa-map-marker" style="width:30px"></i> Chennai, INDIA<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +91 9876543210<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: maran@Emblock.in<br>
+    
+  </div>
+  </center>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<br>
+
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Find Us On</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    
+  </div>
+  
+</footer>
+<script>
+function checkforblank() {
+  
+   if (document.getElementById('Destination').value == "") {
+       alert ('Please enter the missing field');
+	   document.getElementById('Destination').style.bordercolor="red";
+	   return false;
+	   }
+	    
+	   }
+</script>	   
+
+<script>
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+</script>
+
+</body>
+</html>
